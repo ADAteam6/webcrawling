@@ -1,2 +1,3 @@
 # Web Crawling
-Web Crawling using Nutch 
+
+1)Install Apache Nutch and extract:
