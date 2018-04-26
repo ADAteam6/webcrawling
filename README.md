@@ -114,7 +114,7 @@ cp ${NUTCH_RUNTIME_HOME}/conf/schema.xml ${APACHE_SOLR_HOME}/example/solr/collec
 cd $NUTCH_RUNTIME_HOME
 bin/nutch solrindex http://127.0.0.1:8983/solr/ crawl/crawldb -linkdb crawl/linkdb crawl/segments/*
 ```
-<h4> Finished </h4>
+<h4> Finished... </h4>
 
 ```
 <h3> Thanks for Attention </h3>
