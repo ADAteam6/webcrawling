@@ -26,10 +26,26 @@ touch seed.txt
 <h1>4) Give the path of your nutch_home:</h1> To overcome the error (Permission denied)
 
 ```
+chmod +x bin/nutch
+```
+<h1>5) Export Java</h1>
+
+```
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 ```
-<h1>5) Inject the seed url:</h1> Inject the seed url by running the below command
+<h1>6) Inject the seed url:</h1> Inject the seed url by running the below command
 
 ```
 bin/nutch inject crawl/crawldb urls
+```
+<h1>7) Make Segments:</h1> Make segments in which data will be extracted...
+
+```
+bin/nutch generate crawl/crawldb crawl/segments
+```
+<h1>8) Give name to your particular segment</h1>This generates a fetch list for all of the pages due to be fetched. The fetch list is placed in a newly created segment directory. The segment directory is named by the time it's created. We save the name of this segment in the shell variable s1:
+
+```
+s1=`ls -d crawl/segments/2* | tail -1`
+echo $s1
 ```
