@@ -82,4 +82,40 @@ bin/nutch updatedb crawl/crawldb $s2
 ```
 bin/nutch invertlinks crawl/linkdb -dir crawl/segments
 ```
+<h1> Installition and Starting Apache Solr </h1>
+<h3>1) Install and Extract Apache Solr</h3>
 
+```
+cd
+wget https://archive.apache.org/dist/lucene/solr/4.10.1/solr-4.10.1.tgz
+tar -xvf solr-4.10.1.tgz
+```
+<h3>2) Starting Solr</h3>
+
+```
+cd solr-4.10.1/example
+java -jar start.jar
+
+http://YOUR_IP_ADDRESS:8983/solr
+```
+<h3>3) Backup the original Solr schema.xml</h3>
+
+```
+mv ${APACHE_SOLR_HOME}/example/solr/collection1/conf/schema.xml ${APACHE_SOLR_HOME}/example/solr/collection1/conf/schema.xml.org
+```
+<h3>4) Copy the Nutch specific schema.xml to replace it</h3>
+
+```
+cp ${NUTCH_RUNTIME_HOME}/conf/schema.xml ${APACHE_SOLR_HOME}/example/solr/collection1/conf/
+```
+<h3>5)run the Solr Index command from  ```${NUTCH_RUNTIME_HOME}```</h3>
+
+```
+cd $NUTCH_RUNTIME_HOME
+bin/nutch solrindex http://127.0.0.1:8983/solr/ crawl/crawldb -linkdb crawl/linkdb crawl/segments/*
+```
+
+
+```
+<h3> Thanks for Attention </h3>
+<h2> cd ADA/it/bigdata/team6 </h2>
