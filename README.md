@@ -6,13 +6,11 @@ wget https://archive.apache.org/dist/nutch/1.12/apache-nutch-1.12-bin.tar.gz
 <br>
 tar -xvf apache-nutch-1.12-bin.tar.gz
 <br>
-<h1>2)Set up your nutch-site.xml:</h1> add the following commands to the NUTCH-SITE.XML
+<h1>2)Set up your nutch-site.xml:</h1> Add the following commands to the NUTCH-SITE.XML
 <br>
+```ruby
 <property>
-  <br>
  <name>http.agent.name</name>
-  <br>
  <value>My Nutch Spider</value>
- <br>
 </property>
-<br>
+```
