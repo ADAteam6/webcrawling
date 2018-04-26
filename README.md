@@ -16,3 +16,10 @@ tar -xvf apache-nutch-1.12-bin.tar.gz
  <value>My Nutch Spider</value>
 </property>
 ```
+<h1>3)Make a "urls" folder and "seed.txt" file in Apache Nutch</h3>
+
+```
+cd apache-nutch-1.12
+mkdir urls
+touch seed.txt
+```
