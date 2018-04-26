@@ -8,7 +8,7 @@ tar -xvf apache-nutch-1.12-bin.tar.gz
 <br>
 <h1>2)Set up your nutch-site.xml:</h1> Add the following commands to the NUTCH-SITE.XML
 <br>
-```ruby
+```javascript
 <property>
  <name>http.agent.name</name>
  <value>My Nutch Spider</value>
