@@ -1,4 +1,4 @@
-![Logo](https://ibb.co/d2T36x)
+![Logo](https://image.ibb.co/gjVGRx/TeamsIX.png)
 
 
 # Web Crawling using Apache Nutch storing data on HDFS
