@@ -1,6 +1,8 @@
 # Web Crawling
 
-<h1>1) Install Apache Nutch and extract:</h1>
+<h1> Installation and Configurate Apache Nutch </h1>
+
+<h3>1) Install Apache Nutch and extract:</h3>
 <br>
 
 ```
@@ -49,3 +51,35 @@ bin/nutch generate crawl/crawldb crawl/segments
 s1=`ls -d crawl/segments/2* | tail -1`
 echo $s1
 ```
+<h1>9) Start the fetch phase of the segment</h3>
+
+```
+bin/nutch fetch $s1
+```
+<h1>10) Then parse the data</h3>
+
+```
+bin/nutch parse $s1
+```
+<h1>11) Update the database with the results of the fetch</h3>
+
+```
+bin/nutch updatedb crawl/crawldb $s1
+```
+<h1>12) Then, generate, fetch a new segment containing the top scoring 1.000 pages</h3>
+
+```
+bin/nutch generate crawl/crawldb crawl/segments -topN 1000
+s2=`ls -d crawl/segments/2* | tail -1`
+echo $s2
+
+bin/nutch fetch $s2
+bin/nutch parse $s2
+bin/nutch updatedb crawl/crawldb $s2
+```
+<h1>13) Invert all of the links</h3> Before indexing first invert all of the links, so that may index incoming anchor text with the pages.
+
+```
+bin/nutch invertlinks crawl/linkdb -dir crawl/segments
+```
+
