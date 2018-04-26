@@ -8,6 +8,7 @@ tar -xvf apache-nutch-1.12-bin.tar.gz
 <br>
 <h1>2)Set up your nutch-site.xml:</h1> Add the following commands to the NUTCH-SITE.XML
 <br>
+
 ```
 <property>
  <name>http.agent.name</name>
