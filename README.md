@@ -1,4 +1,4 @@
-![Logo](https://image.ibb.co/cevY6x/Webp_net_resizeimage.png)
+![Logo](https://image.ibb.co/mEc2zH/Webp_net_resizeimage_2.png)
 
 
 # Web Crawling using Apache Nutch storing data on HDFS
