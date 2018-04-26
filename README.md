@@ -5,4 +5,5 @@
 wget https://archive.apache.org/dist/nutch/1.12/apache-nutch-1.12-bin.tar.gz
 <br>
 tar -xvf apache-nutch-1.12-bin.tar.gz
+<br>
 2)
